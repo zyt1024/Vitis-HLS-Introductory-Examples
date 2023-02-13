@@ -1,0 +1,5 @@
+,entry_proc_U0,,status1.csv
+,getinstream_U0,,status2.csv
+,streamtoparallelwithburst_U0,,status3.csv
+,AESL_inst_example,,module_status1.csv
+streamtoparallelwithburst_U0,grp_streamtoparallelwithburst_Pipeline_VITIS_LOOP_24_2_fu_91,,module_status2.csv

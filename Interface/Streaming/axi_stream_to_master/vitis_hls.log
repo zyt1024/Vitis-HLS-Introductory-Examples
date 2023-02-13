@@ -1,0 +1,391 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.1 (64-bit)
+  **** SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+  **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source /home/u200/Xilinx/Vitis_HLS/2021.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: Applying HLS Y2K22 patch v1.2 for IP revision
+INFO: [HLS 200-10] Running '/home/u200/Xilinx/Vitis_HLS/2021.1/bin/unwrapped/lnx64.o/vitis_hls'
+/home/u200/Xilinx/Vitis_HLS/2021.1/tps/tcl/tcl8.5/tzdata/Asia/Shanghai can't be opened.
+INFO: [HLS 200-10] For user 'zyt' on host 'eostest03.ihep.ac.cn' (Linux_x86_64 version 3.10.0-1160.el7.x86_64) on Fri Feb 03 10:33:30 CST 2023
+INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core)"
+INFO: [HLS 200-10] In directory '/home/zyt/example/Vitis-HLS-Introductory-Examples/Interface/Streaming/axi_stream_to_master'
+Sourcing Tcl script 'run_hls.tcl'
+INFO: [HLS 200-1510] Running: open_project -reset proj 
+INFO: [HLS 200-10] Creating and opening project '/home/zyt/example/Vitis-HLS-Introductory-Examples/Interface/Streaming/axi_stream_to_master/proj'.
+INFO: [HLS 200-1510] Running: add_files example.cpp 
+INFO: [HLS 200-10] Adding design file 'example.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb example_test.cpp 
+INFO: [HLS 200-10] Adding test bench file 'example_test.cpp' to the project
+INFO: [HLS 200-1510] Running: set_top example 
+INFO: [HLS 200-1510] Running: open_solution -reset solution1 -flow_target vitis 
+INFO: [HLS 200-10] Creating and opening solution '/home/zyt/example/Vitis-HLS-Introductory-Examples/Interface/Streaming/axi_stream_to_master/proj/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+WARNING: [HLS 200-40] No /home/zyt/example/Vitis-HLS-Introductory-Examples/Interface/Streaming/axi_stream_to_master/proj/solution1/solution1.aps file found.
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_latency=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcvu9p-flga2104-2-i 
+INFO: [HLS 200-1611] Setting target device to 'xcvu9p-flga2104-2-i'
+INFO: [HLS 200-1510] Running: create_clock -period 5 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../example_test.cpp in debug mode
+   Compiling ../../../../example.cpp in debug mode
+   Generating csim.exe
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 3.91 seconds. CPU system time: 0.78 seconds. Elapsed time: 3.74 seconds; current allocated memory: 250.766 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 251.019 MB.
+INFO: [HLS 200-10] Analyzing design file 'example.cpp' ... 
+WARNING: [HLS 207-5528] Ignore interface attribute or pragma which is not used in top function: example.cpp:56:9
+WARNING: [HLS 207-5301] unused parameter 'print': /home/u200/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_int_base.h:792:16
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 3.95 seconds. CPU system time: 0.55 seconds. Elapsed time: 4.49 seconds; current allocated memory: 252.765 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
+INFO: [HLS 214-279] Initial Interval estimation mode is set into default.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-131] Inlining function 'hls::stream<data, 0>::stream()' into 'hls::stream<data, 4096>::stream()' (/home/u200/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h:198:43)
+INFO: [HLS 214-131] Inlining function 'hls::stream<int, 0>::stream()' into 'hls::stream<int, 64>::stream()' (/home/u200/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h:198:43)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>::get_user_ptr()' into 'hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>::read()' (/home/u200/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_axi_sdata.h:293:50)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>::get_dest_ptr()' into 'hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>::read()' (/home/u200/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_axi_sdata.h:296:25)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>::get_id_ptr()' into 'hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>::read()' (/home/u200/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_axi_sdata.h:295:67)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>::get_user_ptr()' into 'hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>::read()' (/home/u200/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_axi_sdata.h:295:36)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>::get_dest_ptr()' into 'hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>::read()' (/home/u200/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_axi_sdata.h:294:39)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>::get_id_ptr()' into 'hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>::read()' (/home/u200/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/ap_axi_sdata.h:294:23)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>::read()' into 'getinstream(hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>&, hls::stream<data, 0>&, hls::stream<int, 0>&)' (example.cpp:40:21)
+INFO: [HLS 214-131] Inlining function 'hls::stream<int, 0>::write(int const&)' into 'getinstream(hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>&, hls::stream<data, 0>&, hls::stream<int, 0>&)' (example.cpp:45:18)
+INFO: [HLS 214-131] Inlining function 'hls::stream<data, 0>::write(data const&)' into 'getinstream(hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>&, hls::stream<data, 0>&, hls::stream<int, 0>&)' (example.cpp:42:18)
+INFO: [HLS 214-131] Inlining function 'hls::stream<int, 0>::read(int&)' into 'hls::stream<int, 0>::read()' (/home/u200/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h:156:9)
+INFO: [HLS 214-131] Inlining function 'hls::stream<data, 0>::read(data&)' into 'hls::stream<data, 0>::read()' (/home/u200/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h:156:9)
+INFO: [HLS 214-131] Inlining function 'hls::stream<int, 0>::read()' into 'streamtoparallelwithburst(hls::stream<data, 0>&, hls::stream<int, 0>&, ap_uint<64>*)' (example.cpp:23:27)
+INFO: [HLS 214-131] Inlining function 'hls::stream<data, 0>::read()' into 'streamtoparallelwithburst(hls::stream<data, 0>&, hls::stream<int, 0>&, ap_uint<64>*)' (example.cpp:26:21)
+INFO: [HLS 214-131] Inlining function 'hls::stream<data, 4096>::stream()' into 'example(hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>&, ap_uint<64>*)' (example.cpp:60:32)
+INFO: [HLS 214-131] Inlining function 'hls::stream<int, 64>::stream()' into 'example(hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>&, ap_uint<64>*)' (example.cpp:61:32)
+INFO: [HLS 214-241] Aggregating maxi variable 'outTop' with non-compact mode in 64-bits
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 214-115] Multiple burst writes of variable length and bit width 64 in loop 'VITIS_LOOP_24_2'(example.cpp:24:22) has been inferred on port 'gmem0'. These bursts requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (example.cpp:24:22)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i128.s_struct.datas' into 'getinstream(hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul>, 0>&, hls::stream<data, 0>&, hls::stream<int, 0>&) (.1)' (/home/u200/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 4.05 seconds. CPU system time: 0.63 seconds. Elapsed time: 4.72 seconds; current allocated memory: 254.110 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 254.111 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 262.681 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.1 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.11 seconds; current allocated memory: 274.606 MB.
+INFO: [XFORM 203-712] Applying dataflow to function 'example' (example.cpp:60:1), detected/extracted 3 process function(s): 
+	 'entry_proc'
+	 'getinstream'
+	 'streamtoparallelwithburst'.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.17 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.19 seconds; current allocated memory: 308.609 MB.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_22_1' (example.cpp:21:8) in function 'streamtoparallelwithburst' either the parent loop or sub loop is do-while loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.1;t=hls+guidance;d=200-960.html
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 345.949 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'example' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.09 seconds; current allocated memory: 346.171 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 346.228 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'getinstream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_38_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_38_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 346.350 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 346.500 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'streamtoparallelwithburst_Pipeline_VITIS_LOOP_24_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_24_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_24_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 346.602 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 346.767 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'streamtoparallelwithburst' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 346.915 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 347.119 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'example' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 347.225 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 347.399 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'entry_proc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 347.541 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'getinstream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'getinstream' pipeline 'VITIS_LOOP_38_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'getinstream'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 348.101 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'streamtoparallelwithburst_Pipeline_VITIS_LOOP_24_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'streamtoparallelwithburst_Pipeline_VITIS_LOOP_24_2' pipeline 'VITIS_LOOP_24_2' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'streamtoparallelwithburst_Pipeline_VITIS_LOOP_24_2/m_axi_gmem0_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'streamtoparallelwithburst_Pipeline_VITIS_LOOP_24_2/m_axi_gmem0_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'streamtoparallelwithburst_Pipeline_VITIS_LOOP_24_2/m_axi_gmem0_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'streamtoparallelwithburst_Pipeline_VITIS_LOOP_24_2/m_axi_gmem0_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'streamtoparallelwithburst_Pipeline_VITIS_LOOP_24_2/m_axi_gmem0_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'streamtoparallelwithburst_Pipeline_VITIS_LOOP_24_2/m_axi_gmem0_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'streamtoparallelwithburst_Pipeline_VITIS_LOOP_24_2/m_axi_gmem0_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'streamtoparallelwithburst_Pipeline_VITIS_LOOP_24_2/m_axi_gmem0_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'streamtoparallelwithburst_Pipeline_VITIS_LOOP_24_2/m_axi_gmem0_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'streamtoparallelwithburst_Pipeline_VITIS_LOOP_24_2/m_axi_gmem0_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'streamtoparallelwithburst_Pipeline_VITIS_LOOP_24_2/m_axi_gmem0_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'streamtoparallelwithburst_Pipeline_VITIS_LOOP_24_2/m_axi_gmem0_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'streamtoparallelwithburst_Pipeline_VITIS_LOOP_24_2/m_axi_gmem0_BREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'streamtoparallelwithburst_Pipeline_VITIS_LOOP_24_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 349.063 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'streamtoparallelwithburst' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'streamtoparallelwithburst'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 350.238 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'example' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/gmem0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/inStreamTop_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/inStreamTop_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/inStreamTop_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/inStreamTop_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'example/outTop' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'example' to 's_axilite & ap_ctrl_chain'.
+INFO: [RTGEN 206-100] Bundling port 'outTop' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'example'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 351.875 MB.
+INFO: [RTMG 210-285] Implementing FIFO 'outTop_c_channel_U(example_fifo_w64_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'buf_U(example_fifo_w128_d4096_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'count_U(example_fifo_w32_d64_A)' using Vivado Default RAMs.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.5 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.54 seconds; current allocated memory: 356.739 MB.
+INFO: [HLS 200-1603] Design has MAXI bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.47 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.5 seconds; current allocated memory: 361.640 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for example.
+INFO: [VLOG 209-307] Generating Verilog RTL for example.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 273.97 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 10.2 seconds. CPU system time: 1.38 seconds. Elapsed time: 11.65 seconds; current allocated memory: 361.627 MB.
+INFO: [HLS 200-1510] Running: cosim_design 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "/home/u200/Xilinx/Vitis_HLS/2021.1/tps/lnx64/gcc-6.2.0/bin/g++"
+   Compiling example_test.cpp_pre.cpp.tb.cpp
+   Compiling apatb_example_util.cpp
+   Compiling example.cpp_pre.cpp.tb.cpp
+   Compiling apatb_example.cpp
+   Compiling apatb_example_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: /home/u200/Xilinx/Vivado/2021.1/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_example_top glbl -Oenable_linking_all_libraries -prj example.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_0_19 -L floating_point_v7_1_12 --lib ieee_proposed=./ieee_proposed -s example 
+Multi-threading is on. Using 46 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/zyt/example/Vitis-HLS-Introductory-Examples/Interface/Streaming/axi_stream_to_master/proj/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/zyt/example/Vitis-HLS-Introductory-Examples/Interface/Streaming/axi_stream_to_master/proj/solution1/sim/verilog/example.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_example_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/zyt/example/Vitis-HLS-Introductory-Examples/Interface/Streaming/axi_stream_to_master/proj/solution1/sim/verilog/AESL_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/zyt/example/Vitis-HLS-Introductory-Examples/Interface/Streaming/axi_stream_to_master/proj/solution1/sim/verilog/AESL_axi_s_inStreamTop.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_inStreamTop
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/zyt/example/Vitis-HLS-Introductory-Examples/Interface/Streaming/axi_stream_to_master/proj/solution1/sim/verilog/AESL_axi_master_gmem0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_master_gmem0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/zyt/example/Vitis-HLS-Introductory-Examples/Interface/Streaming/axi_stream_to_master/proj/solution1/sim/verilog/AESL_axi_slave_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_slave_control
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/zyt/example/Vitis-HLS-Introductory-Examples/Interface/Streaming/axi_stream_to_master/proj/solution1/sim/verilog/AESL_deadlock_detection_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_detect_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/zyt/example/Vitis-HLS-Introductory-Examples/Interface/Streaming/axi_stream_to_master/proj/solution1/sim/verilog/AESL_deadlock_report_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_report_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/zyt/example/Vitis-HLS-Introductory-Examples/Interface/Streaming/axi_stream_to_master/proj/solution1/sim/verilog/AESL_deadlock_detector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_detector
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/zyt/example/Vitis-HLS-Introductory-Examples/Interface/Streaming/axi_stream_to_master/proj/solution1/sim/verilog/AESL_deadlock_kernel_monitor_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_kernel_monitor_top
+WARNING: [VRFC 10-3824] variable 'block_delay' must explicitly be declared as automatic or static [/home/zyt/example/Vitis-HLS-Introductory-Examples/Interface/Streaming/axi_stream_to_master/proj/solution1/sim/verilog/AESL_deadlock_kernel_monitor_top.v:34]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/zyt/example/Vitis-HLS-Introductory-Examples/Interface/Streaming/axi_stream_to_master/proj/solution1/sim/verilog/AESL_deadlock_idx0_monitor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_idx0_monitor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/zyt/example/Vitis-HLS-Introductory-Examples/Interface/Streaming/axi_stream_to_master/proj/solution1/sim/verilog/example_entry_proc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module example_entry_proc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/zyt/example/Vitis-HLS-Introductory-Examples/Interface/Streaming/axi_stream_to_master/proj/solution1/sim/verilog/example_getinstream.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module example_getinstream
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/zyt/example/Vitis-HLS-Introductory-Examples/Interface/Streaming/axi_stream_to_master/proj/solution1/sim/verilog/example_streamtoparallelwithburst_Pipeline_VITIS_LOOP_24_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module example_streamtoparallelwithburst_Pipeline_VITIS_LOOP_24_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/zyt/example/Vitis-HLS-Introductory-Examples/Interface/Streaming/axi_stream_to_master/proj/solution1/sim/verilog/example_streamtoparallelwithburst.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module example_streamtoparallelwithburst
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/zyt/example/Vitis-HLS-Introductory-Examples/Interface/Streaming/axi_stream_to_master/proj/solution1/sim/verilog/example.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module example
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/zyt/example/Vitis-HLS-Introductory-Examples/Interface/Streaming/axi_stream_to_master/proj/solution1/sim/verilog/example_regslice_both.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module example_regslice_both
+INFO: [VRFC 10-311] analyzing module example_regslice_both_w1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/zyt/example/Vitis-HLS-Introductory-Examples/Interface/Streaming/axi_stream_to_master/proj/solution1/sim/verilog/example_flow_control_loop_pipe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module example_flow_control_loop_pipe
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/zyt/example/Vitis-HLS-Introductory-Examples/Interface/Streaming/axi_stream_to_master/proj/solution1/sim/verilog/example_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module example_flow_control_loop_pipe_sequential_init
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/zyt/example/Vitis-HLS-Introductory-Examples/Interface/Streaming/axi_stream_to_master/proj/solution1/sim/verilog/example_fifo_w64_d2_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module example_fifo_w64_d2_S_shiftReg
+INFO: [VRFC 10-311] analyzing module example_fifo_w64_d2_S
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/zyt/example/Vitis-HLS-Introductory-Examples/Interface/Streaming/axi_stream_to_master/proj/solution1/sim/verilog/example_fifo_w128_d4096_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module example_fifo_w128_d4096_A_ram
+INFO: [VRFC 10-311] analyzing module example_fifo_w128_d4096_A
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/zyt/example/Vitis-HLS-Introductory-Examples/Interface/Streaming/axi_stream_to_master/proj/solution1/sim/verilog/example_fifo_w32_d64_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module example_fifo_w32_d64_A_ram
+INFO: [VRFC 10-311] analyzing module example_fifo_w32_d64_A
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/zyt/example/Vitis-HLS-Introductory-Examples/Interface/Streaming/axi_stream_to_master/proj/solution1/sim/verilog/example_control_s_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module example_control_s_axi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/zyt/example/Vitis-HLS-Introductory-Examples/Interface/Streaming/axi_stream_to_master/proj/solution1/sim/verilog/example_gmem0_m_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module example_gmem0_m_axi
+INFO: [VRFC 10-311] analyzing module example_gmem0_m_axi_reg_slice
+INFO: [VRFC 10-311] analyzing module example_gmem0_m_axi_fifo
+INFO: [VRFC 10-311] analyzing module example_gmem0_m_axi_buffer
+INFO: [VRFC 10-311] analyzing module example_gmem0_m_axi_decoder
+INFO: [VRFC 10-311] analyzing module example_gmem0_m_axi_throttle
+INFO: [VRFC 10-311] analyzing module example_gmem0_m_axi_read
+INFO: [VRFC 10-311] analyzing module example_gmem0_m_axi_write
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/zyt/example/Vitis-HLS-Introductory-Examples/Interface/Streaming/axi_stream_to_master/proj/solution1/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3645] port 'axis_block_info' remains unconnected for this instance [/home/zyt/example/Vitis-HLS-Introductory-Examples/Interface/Streaming/axi_stream_to_master/proj/solution1/sim/verilog/AESL_deadlock_kernel_monitor_top.v:24]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.example_control_s_axi
+Compiling module xil_defaultlib.example_gmem0_m_axi_reg_slice(N=...
+Compiling module xil_defaultlib.example_gmem0_m_axi_fifo(DATA_BI...
+Compiling module xil_defaultlib.example_gmem0_m_axi_buffer(DATA_...
+Compiling module xil_defaultlib.example_gmem0_m_axi_fifo(DEPTH=1...
+Compiling module xil_defaultlib.example_gmem0_m_axi_fifo(DATA_BI...
+Compiling module xil_defaultlib.example_gmem0_m_axi_write(NUM_WR...
+Compiling module xil_defaultlib.example_gmem0_m_axi_buffer(DATA_...
+Compiling module xil_defaultlib.example_gmem0_m_axi_reg_slice(N=...
+Compiling module xil_defaultlib.example_gmem0_m_axi_read(NUM_REA...
+Compiling module xil_defaultlib.example_gmem0_m_axi_throttle(ADD...
+Compiling module xil_defaultlib.example_gmem0_m_axi(NUM_READ_OUT...
+Compiling module xil_defaultlib.example_entry_proc
+Compiling module xil_defaultlib.example_flow_control_loop_pipe
+Compiling module xil_defaultlib.example_regslice_both(DataWidth=...
+Compiling module xil_defaultlib.example_regslice_both(DataWidth=...
+Compiling module xil_defaultlib.example_regslice_both(DataWidth=...
+Compiling module xil_defaultlib.example_getinstream
+Compiling module xil_defaultlib.example_flow_control_loop_pipe_s...
+Compiling module xil_defaultlib.example_streamtoparallelwithburs...
+Compiling module xil_defaultlib.example_streamtoparallelwithburs...
+Compiling module xil_defaultlib.example_fifo_w64_d2_S_shiftReg
+Compiling module xil_defaultlib.example_fifo_w64_d2_S
+Compiling module xil_defaultlib.example_fifo_w128_d4096_A_ram
+Compiling module xil_defaultlib.example_fifo_w128_d4096_A
+Compiling module xil_defaultlib.example_fifo_w32_d64_A_ram
+Compiling module xil_defaultlib.example_fifo_w32_d64_A
+Compiling module xil_defaultlib.example
+Compiling module xil_defaultlib.fifo(DEPTH=1024,WIDTH=64)
+Compiling module xil_defaultlib.fifo(DEPTH=1024)
+Compiling module xil_defaultlib.fifo(DEPTH=1024,WIDTH=1)
+Compiling module xil_defaultlib.AESL_axi_s_inStreamTop
+Compiling module xil_defaultlib.AESL_axi_master_gmem0
+Compiling module xil_defaultlib.AESL_axi_slave_control
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_report_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detector_1
+Compiling module xil_defaultlib.AESL_deadlock_idx0_monitor
+Compiling module xil_defaultlib.AESL_deadlock_kernel_monitor_top...
+Compiling module xil_defaultlib.df_fifo_intf
+Compiling module xil_defaultlib.df_process_intf
+Compiling module xil_defaultlib.nodf_module_intf
+Compiling module xil_defaultlib.seq_loop_intf(FSM_WIDTH=19)
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=1)
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_example_top
+Compiling module work.glbl
+Built simulation snapshot example
+
+****** Webtalk v2021.1 (64-bit)
+  **** SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+  **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source /home/zyt/example/Vitis-HLS-Introductory-Examples/Interface/Streaming/axi_stream_to_master/proj/solution1/sim/verilog/xsim.dir/example/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Feb  3 10:34:11 2023...
+
+****** xsim v2021.1 (64-bit)
+  **** SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+  **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/example/xsim_script.tcl
+# xsim {example} -autoloadwcfg -tclbatch {example.tcl}
+Time resolution is 1 ps
+source example.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [n/a] @ "128000"
+// RTL Simulation : 1 / 1 [n/a] @ "7608000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 7637500 ps : File "/home/zyt/example/Vitis-HLS-Introductory-Examples/Interface/Streaming/axi_stream_to_master/proj/solution1/sim/verilog/example.autotb.v" Line 481
+## quit
+INFO: [Common 17-206] Exiting xsim at Fri Feb  3 10:34:23 2023...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 40.01 seconds. CPU system time: 4.2 seconds. Elapsed time: 36.09 seconds; current allocated memory: 365.587 MB.
+INFO: [HLS 200-112] Total CPU user time: 56.91 seconds. Total CPU system time: 7.21 seconds. Total elapsed time: 53.72 seconds; peak allocated memory: 361.640 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Fri Feb  3 10:34:24 2023...

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BindInfo>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="count_2_fu_109_p2" SOURCE="example.cpp:43" VARIABLE="count_2" MODULE="getinstream" LOOP="VITIS_LOOP_38_1" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op icmp" ID="" IMPL="auto" LATENCY="0" OPTYPE="icmp" PRAGMA="" RTLNAME="icmp_ln44_fu_125_p2" SOURCE="example.cpp:44" VARIABLE="icmp_ln44" MODULE="getinstream" LOOP="VITIS_LOOP_38_1" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op or" ID="" IMPL="auto" LATENCY="0" OPTYPE="or" PRAGMA="" RTLNAME="or_ln44_fu_131_p2" SOURCE="example.cpp:44" VARIABLE="or_ln44" MODULE="getinstream" LOOP="VITIS_LOOP_38_1" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op icmp" ID="" IMPL="auto" LATENCY="0" OPTYPE="icmp" PRAGMA="" RTLNAME="icmp_ln24_fu_133_p2" SOURCE="example.cpp:24" VARIABLE="icmp_ln24" MODULE="streamtoparallelwithburst_Pipeline_VITIS_LOOP_24_2" LOOP="VITIS_LOOP_24_2" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="add_ln24_fu_139_p2" SOURCE="example.cpp:24" VARIABLE="add_ln24" MODULE="streamtoparallelwithburst_Pipeline_VITIS_LOOP_24_2" LOOP="VITIS_LOOP_24_2" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op icmp" ID="" IMPL="auto" LATENCY="0" OPTYPE="icmp" PRAGMA="" RTLNAME="icmp_ln24_fu_110_p2" SOURCE="example.cpp:24" VARIABLE="icmp_ln24" MODULE="streamtoparallelwithburst" LOOP="VITIS_LOOP_22_1" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="add_ln24_fu_122_p2" SOURCE="example.cpp:24" VARIABLE="add_ln24" MODULE="streamtoparallelwithburst" LOOP="VITIS_LOOP_22_1" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="add_ln29_fu_165_p2" SOURCE="example.cpp:29" VARIABLE="add_ln29" MODULE="streamtoparallelwithburst" LOOP="VITIS_LOOP_22_1" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="storage" DISPLAY="bind_storage fifo" ID="" IMPL="memory" LATENCY="0" OPTYPE="fifo" PRAGMA="" RTLNAME="buf_U" SOURCE="example.cpp:60" VARIABLE="buf" MODULE="example" LOOP="" DSP="0" BRAM="4" URAM="0"/>
+	<BindNode BINDTYPE="storage" DISPLAY="bind_storage fifo" ID="" IMPL="memory" LATENCY="0" OPTYPE="fifo" PRAGMA="" RTLNAME="count_U" SOURCE="example.cpp:61" VARIABLE="count" MODULE="example" LOOP="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op fifo" ID="" IMPL="srl" LATENCY="0" OPTYPE="fifo" PRAGMA="" RTLNAME="outTop_c_channel_U" SOURCE="" VARIABLE="outTop_c_channel" MODULE="example" LOOP="" DSP="0" BRAM="0" URAM="0"/>
+</BindInfo>
